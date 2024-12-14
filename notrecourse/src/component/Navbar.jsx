@@ -8,9 +8,12 @@ export function NavbarStandard() {
     return (
         <>
             <Navbar expand="lg" fixed="top" className="bg-body-tertiary">
-                <Container>
-                    <Navbar.Brand href="#">NotreCourse</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Container fluid>
+                    <div className='d-flex align-items-center'>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" className='order-1' />
+                        <Navbar.Brand className='ms-2 order-2' href="#">NotreCourse</Navbar.Brand>
+                    </div>
+                    <Button variant="outline-primary">Login</Button>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
@@ -25,11 +28,11 @@ export function NavbarStandard() {
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
-                                
+
                             </NavDropdown>
                         </Nav>
-                        <Button variant="outline-primary">Login</Button>
                     </Navbar.Collapse>
+
                 </Container>
             </Navbar>
         </>
