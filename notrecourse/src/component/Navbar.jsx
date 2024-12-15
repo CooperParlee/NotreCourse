@@ -9,11 +9,19 @@ export function NavbarStandard() {
         <>
             <Navbar expand="lg" fixed="top" className="bg-body-tertiary">
                 <Container fluid>
-                    <div className='d-flex align-items-center'>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" className='order-1' />
-                        <Navbar.Brand className='ms-2 order-2' href="#">NotreCourse</Navbar.Brand>
+                    {/* Brand and Toggle */}
+                    <div className="d-flex align-items-center">
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Brand className="ms-2" href="#">
+                            NotreCourse
+                        </Navbar.Brand>
                     </div>
-                    <Button variant="outline-primary">Login</Button>
+
+                    <div className="d-flex align-items-center ms-auto d-lg-none">
+                        <Button variant="outline-primary">Login</Button>
+                    </div>
+
+                    {/* Collapsible Navigation */}
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
@@ -28,11 +36,13 @@ export function NavbarStandard() {
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
-
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
 
+                    <div className="d-flex align-items-center ms-auto d-none d-lg-block">
+                        <Button variant="outline-primary">Login</Button>
+                    </div>
                 </Container>
             </Navbar>
         </>
